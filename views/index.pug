@@ -1,19 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  h2#numClientes
-  ul#mensajes 
-
-  div
-    label Nombre: 
-    input#inputUsuario(type="text")
-    p
-  div
-    label Mensaje: 
-    input#inputMensaje(type="text")
-    p
-    button#btnEnviar Enviar
+  .row
+    h1= title
+    h7#numClientes
+    ul#mensajes 
+  .row
+    .col-12.col-md-6
+      label Nombre:  
+      input#inputUsuario(type="text")
+      p
+  .row
+    .col-12.col-md-6
+      label Mensaje:   
+      input#inputMensaje(type="text")
+      p
+      button#btnEnviar Enviar
 
   script(src="/socket.io/socket.io.js") //- codigo JS del cliente, nos traemos la librería de socket.io
   script. 
